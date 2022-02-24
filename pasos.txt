@@ -1,0 +1,41 @@
+copiar fonts e images en assesta
+
+copiar estilos login.css
+
+crear modulo auth
+  ng g m auth --routing
+
+crear modulo protected
+  ng g m protected --routing
+
+
+crear componentes
+  ng g c auth/pages/login --skip-Tests -is
+  ng g c auth/pages/register --skip-Tests -is
+  ng g c auth/pages/main --skip-Tests -is
+
+  ng g c protected/dashboard --skip-Tests -is
+
+
+copiar login.html en main.component
+
+
+crear servicio
+  ng g s auth/services/auth --skip-Tests
+
+agregar variable de entorno
+  baseUrl: 'http://localhost:4000/api'
+
+crear intefaces
+  auth/interfaces/interfaces.ts
+
+add sweetalert2
+  npm install sweetalert2
+
+      import Swal from 'sweetalert2';
+
+
+crear guard
+  ng g guard guards/validarToken --skip-Tests
+    * CanActivate
+    * CanLoad
